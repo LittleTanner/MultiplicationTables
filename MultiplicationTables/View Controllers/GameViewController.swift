@@ -10,10 +10,21 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    var player: Player?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        equationGenerator()
+    }
+    
+    func equationGenerator() -> Int {
+        let number1 = Int.random(in: 0..<20)
+        let number2 = Int.random(in: 0..<20)
+        
+        //outlet1 = "\(number1)"
+        //outlet2 = "\(number2)"
+        
+        return number1 * number2
     }
     
 
