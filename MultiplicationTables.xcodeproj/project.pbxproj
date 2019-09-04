@@ -10,6 +10,7 @@
 		D42B51E32320363F0091CC1F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B51E22320363F0091CC1F /* Player.swift */; };
 		D42B51E52320369F0091CC1F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B51E42320369F0091CC1F /* Game.swift */; };
 		D42B51E7232038EF0091CC1F /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B51E6232038EF0091CC1F /* Leaderboard.swift */; };
+		D42B51E923204C9B0091CC1F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B51E823204C9B0091CC1F /* GameViewController.swift */; };
 		FC3AD9A42320323F00B35DC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3AD9A32320323F00B35DC6 /* AppDelegate.swift */; };
 		FC3AD9A62320323F00B35DC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3AD9A52320323F00B35DC6 /* ViewController.swift */; };
 		FC3AD9A92320323F00B35DC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3AD9A72320323F00B35DC6 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		D42B51E22320363F0091CC1F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		D42B51E42320369F0091CC1F /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		D42B51E6232038EF0091CC1F /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
+		D42B51E823204C9B0091CC1F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		FC3AD9A02320323F00B35DC6 /* MultiplicationTables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiplicationTables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3AD9A32320323F00B35DC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC3AD9A52320323F00B35DC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				FC3AD9A52320323F00B35DC6 /* ViewController.swift */,
+				D42B51E823204C9B0091CC1F /* GameViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				D42B51E32320363F0091CC1F /* Player.swift in Sources */,
 				FC3AD9A42320323F00B35DC6 /* AppDelegate.swift in Sources */,
 				D42B51E52320369F0091CC1F /* Game.swift in Sources */,
+				D42B51E923204C9B0091CC1F /* GameViewController.swift in Sources */,
 				D42B51E7232038EF0091CC1F /* Leaderboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,7 +331,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C39EPG5VUE;
+				DEVELOPMENT_TEAM = KMTDCPCY5V;
 				INFOPLIST_FILE = "$(SRCROOT)/MultiplicationTables/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -345,7 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C39EPG5VUE;
+				DEVELOPMENT_TEAM = KMTDCPCY5V;
 				INFOPLIST_FILE = "$(SRCROOT)/MultiplicationTables/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
