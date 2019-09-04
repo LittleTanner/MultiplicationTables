@@ -179,6 +179,9 @@
                                     <constraint firstAttribute="height" constant="35" id="Oc0-zR-boN"/>
                                 </constraints>
                                 <state key="normal" title="SUBMIT"/>
+                                <connections>
+                                    <action selector="submitAnswerButtonTapped:" destination="cTz-l1-Zpm" eventType="touchUpInside" id="3JW-ro-gPs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -201,6 +204,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h6j-H3-0vg"/>
                     </view>
+                    <connections>
+                        <outlet property="answerTextField" destination="iOt-5C-Mzi" id="4eG-gq-rOz"/>
+                        <outlet property="number1Label" destination="f1g-bW-0qz" id="luj-Yq-qTp"/>
+                        <outlet property="number2Label" destination="60i-fe-I7s" id="ZC3-Vr-zZa"/>
+                        <outlet property="scoreLabel" destination="o9S-Pv-DPl" id="zKv-v0-39J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="av0-In-dqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
