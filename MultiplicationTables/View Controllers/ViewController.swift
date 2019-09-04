@@ -56,8 +56,9 @@ class ViewController: UIViewController {
             // Object to send
             if let playerName = playerNameTextField.text, !playerName.isEmpty {
             
+                let newPlayer = Player(name: playerName)
                 // Object sent
-                destinationVC.player = playerName
+                destinationVC.player = newPlayer
             }
         }
     }
