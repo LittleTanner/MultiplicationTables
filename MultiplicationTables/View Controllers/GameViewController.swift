@@ -9,7 +9,7 @@
 import UIKit
 
 class GameViewController: UIViewController {
-
+    
     var player: String = ""
     var answer = ""
     var score: Int = 0
@@ -31,14 +31,18 @@ class GameViewController: UIViewController {
             score += 1
             updateViews()
         } else {
-            for aplayer in PlayerController.sharedInstance.leaderboard {
-                if self.player == aplayer.name {
-                    PlayerController.sharedInstance.updatePlayerHighScore(player: aplayer, highScore: score)
-                } else {
-                    PlayerController.sharedInstance.createPlayer(playerName: self.player, highScore: score)
+            if PlayerController.sharedInstance.leaderboard.isEmpty {
+                PlayerController.sharedInstance.createPlayer(playerName: self.player, highScore: score)
+            } else {
+                for aplayer in PlayerController.sharedInstance.leaderboard {
+                    if self.player == aplayer.name {
+                        PlayerController.sharedInstance.updatePlayerHighScore(player: aplayer, highScore: score)
+                    } else {
+                        PlayerController.sharedInstance.createPlayer(playerName: self.player, highScore: score)
+                    }
                 }
+                navigationController?.popViewController(animated: true)
             }
-            navigationController?.popViewController(animated: true)
         }
     }
     
