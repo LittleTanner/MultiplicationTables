@@ -31,9 +31,9 @@ class GameViewController: UIViewController {
             score += 1
             updateViews()
         } else {
-            for player in PlayerController.sharedInstance.leaderboard {
-                if self.player == player.name && score > player.highScore {
-                    PlayerController.sharedInstance.updatePlayerHighScore(player: player, highScore: score)
+            for aplayer in PlayerController.sharedInstance.leaderboard {
+                if self.player == aplayer.name {
+                    PlayerController.sharedInstance.updatePlayerHighScore(player: aplayer, highScore: score)
                 } else {
                     PlayerController.sharedInstance.createPlayer(playerName: self.player, highScore: score)
                 }
@@ -44,6 +44,7 @@ class GameViewController: UIViewController {
     
     func updateViews() {
         scoreLabel.text = "\(score)"
+        answerTextField.text = ""
         equationGenerator()
     }
     
