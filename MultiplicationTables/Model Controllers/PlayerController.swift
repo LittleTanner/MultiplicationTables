@@ -20,7 +20,7 @@ class PlayerController {
     
     // Create Player
     func createPlayer(playerName: String, highScore: Int) {
-        let player = Player(name: playerName)
+        let player = Player(name: playerName, highScore: highScore)
         leaderboard.append(player)
     }
     
