@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D42B51E32320363F0091CC1F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B51E22320363F0091CC1F /* Player.swift */; };
+		D42B51E52320369F0091CC1F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B51E42320369F0091CC1F /* Game.swift */; };
 		FC3AD9A42320323F00B35DC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3AD9A32320323F00B35DC6 /* AppDelegate.swift */; };
 		FC3AD9A62320323F00B35DC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3AD9A52320323F00B35DC6 /* ViewController.swift */; };
 		FC3AD9A92320323F00B35DC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3AD9A72320323F00B35DC6 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D42B51E22320363F0091CC1F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		D42B51E42320369F0091CC1F /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		FC3AD9A02320323F00B35DC6 /* MultiplicationTables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiplicationTables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3AD9A32320323F00B35DC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC3AD9A52320323F00B35DC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D42B51E12320362B0091CC1F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D42B51E22320363F0091CC1F /* Player.swift */,
+				D42B51E42320369F0091CC1F /* Game.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FC3AD9972320323F00B35DC6 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +67,7 @@
 		FC3AD9A22320323F00B35DC6 /* MultiplicationTables */ = {
 			isa = PBXGroup;
 			children = (
+				D42B51E12320362B0091CC1F /* Models */,
 				FC3AD9B5232034D400B35DC6 /* Storyboards */,
 				FC3AD9B6232034E200B35DC6 /* View Controllers */,
 				FC3AD9B7232034EA00B35DC6 /* Resources */,
@@ -160,7 +174,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC3AD9A62320323F00B35DC6 /* ViewController.swift in Sources */,
+				D42B51E32320363F0091CC1F /* Player.swift in Sources */,
 				FC3AD9A42320323F00B35DC6 /* AppDelegate.swift in Sources */,
+				D42B51E52320369F0091CC1F /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
