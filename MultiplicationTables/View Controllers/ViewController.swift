@@ -28,6 +28,11 @@ class ViewController: UIViewController {
         self.view.addGestureRecognizer(tapGesture)
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        leaderboardTableView.reloadData()
+    }
 
     // MARK: - Actions
 
