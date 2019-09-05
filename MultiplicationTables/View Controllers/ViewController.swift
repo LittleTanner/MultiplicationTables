@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         leaderboardTableView.reloadData()
         playerNameTextField.text = ""
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
     // MARK: - Actions

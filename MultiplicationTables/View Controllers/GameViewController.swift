@@ -34,6 +34,10 @@ class GameViewController: UIViewController {
         answerTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     @objc func textFieldDidChange(_ textField: UITextField) {
         guard let player = player else { return }
         
