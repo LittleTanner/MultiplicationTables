@@ -52,12 +52,20 @@ class ViewController: UIViewController {
             // Destination
             guard let destinationVC = segue.destination as? GameViewController else { return }
             
+            
             // Object to send
             if let playerName = playerNameTextField.text, !playerName.isEmpty {
+                let existingPlayer = PlayerController.sharedInstance.leaderboard.filter({ $0.name == playerName}).map({ return $0})
+                
+                if let currentPlayer = existingPlayer.first {
+                    destinationVC.player = currentPlayer
+                } else {
+                
+                let newPlayer = PlayerController.sharedInstance.createPlayer(playerName: playerName, highScore: 0)
             
-                let newPlayer = Player(name: playerName)
                 // Object sent
                 destinationVC.player = newPlayer
+                }
             }
         }
     }
