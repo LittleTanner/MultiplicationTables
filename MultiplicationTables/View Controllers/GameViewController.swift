@@ -30,6 +30,25 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         runTimer()
         updateViews()
+        answerTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        guard let player = player else { return }
+        
+        if textField.text != answer {
+            return
+        } else {
+            if answerTextField.text == answer {
+                score += 1
+                updateViews()
+            } else if score > player.highScore {
+                PlayerController.sharedInstance.updatePlayerHighScore(player: player, highScore: score)
+                navigationController?.popViewController(animated: true)
+            } else {
+                navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     @IBAction func submitAnswerButtonTapped(_ sender: Any) {
