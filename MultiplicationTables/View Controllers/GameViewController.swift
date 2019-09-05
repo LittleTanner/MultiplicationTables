@@ -30,6 +30,7 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         runTimer()
         updateViews()
+        answerTextField.becomeFirstResponder()
         answerTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
     }
     
