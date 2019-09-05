@@ -27,36 +27,15 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func submitAnswerButtonTapped(_ sender: Any) {
-//        if answerTextField.text == answer {
-//            score += 1
-//            updateViews()
-//        }
-//        if answerTextField.text != answer {
-//        if PlayerController.sharedInstance.leaderboard.isEmpty {
-//                PlayerController.sharedInstance.createPlayer(playerName: self.player, highScore: score)
-//                navigationController?.popViewController(animated: true)
-//            } else {
-//                for aplayer in PlayerController.sharedInstance.leaderboard {
-//                    if aplayer.name == self.player {
-//                        if score > aplayer.highScore {
-//                        PlayerController.sharedInstance.updatePlayerHighScore(player: aplayer, highScore: score)
-//                        } else {
-//                            navigationController?.popViewController(animated: true)
-//                        }
-//                    } else {
-//                        PlayerController.sharedInstance.createPlayer(playerName: self.player, highScore: score)
-//                        navigationController?.popViewController(animated: true)
-//                    }
-//                }
-//            }
-//        }
         guard let player = player else { return }
         
         if answerTextField.text == answer {
             score += 1
             updateViews()
         } else if PlayerController.sharedInstance.leaderboard.contains(player) && score > player.highScore {
-            PlayerController.sharedInstance.updatePlayerHighScore(player: player, highScore: score)
+            guard let index = PlayerController.sharedInstance.leaderboard.firstIndex(of: player) else { return }
+            PlayerController.sharedInstance.leaderboard.remove(at: index)
+            PlayerController.sharedInstance.createPlayer(playerName: player.name, highScore: score)
             navigationController?.popViewController(animated: true)
         } else if PlayerController.sharedInstance.leaderboard.contains(player) {
             navigationController?.popViewController(animated: true)
@@ -64,26 +43,6 @@ class GameViewController: UIViewController {
             PlayerController.sharedInstance.createPlayer(playerName: player.name, highScore: score)
             navigationController?.popViewController(animated: true)
             }
-        
-//        if answerTextField.text != answer {
-//            if PlayerController.sharedInstance.leaderboard.isEmpty {
-//                PlayerController.sharedInstance.createPlayer(playerName: self.player, highScore: score)
-//                navigationController?.popViewController(animated: true)
-//            } else {
-//                for aplayer in PlayerController.sharedInstance.leaderboard {
-//                    if aplayer.name == self.player {
-//                        if score > aplayer.highScore {
-//                            PlayerController.sharedInstance.updatePlayerHighScore(player: aplayer, highScore: score)
-//                        } else {
-//                            navigationController?.popViewController(animated: true)
-//                        }
-//                    } else {
-//                        PlayerController.sharedInstance.createPlayer(playerName: self.player, highScore: score)
-//                        navigationController?.popViewController(animated: true)
-//                    }
-//                }
-//            }
-//        }
     }
     
     func updateViews() {

@@ -22,13 +22,5 @@ class PlayerController {
     func createPlayer(playerName: String, highScore: Int) {
         let player = Player(name: playerName, highScore: highScore)
         leaderboard.append(player)
-    }
-    
-    // Update Player High Score
-    func updatePlayerHighScore(player: Player, highScore: Int) {
-        player.highScore = highScore
-    }
-    
-    
-    
+    }  
 }
