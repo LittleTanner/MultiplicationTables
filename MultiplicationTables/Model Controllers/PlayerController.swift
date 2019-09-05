@@ -19,8 +19,14 @@ class PlayerController {
     // CRUD
     
     // Create Player
-    func createPlayer(playerName: String, highScore: Int) {
+    func createPlayer(playerName: String, highScore: Int) -> Player {
         let player = Player(name: playerName, highScore: highScore)
         leaderboard.append(player)
-    }  
+        return player
+    }
+    
+    // Update
+    func updatePlayerHighScore(player: Player, highScore: Int) {
+        player.highScore = highScore
+    }
 }

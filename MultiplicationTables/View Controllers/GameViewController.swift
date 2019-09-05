@@ -32,17 +32,12 @@ class GameViewController: UIViewController {
         if answerTextField.text == answer {
             score += 1
             updateViews()
-        } else if PlayerController.sharedInstance.leaderboard.contains(player) && score > player.highScore {
-            guard let index = PlayerController.sharedInstance.leaderboard.firstIndex(of: player) else { return }
-            PlayerController.sharedInstance.leaderboard.remove(at: index)
-            PlayerController.sharedInstance.createPlayer(playerName: player.name, highScore: score)
-            navigationController?.popViewController(animated: true)
-        } else if PlayerController.sharedInstance.leaderboard.contains(player) {
+        } else if score > player.highScore {
+            PlayerController.sharedInstance.updatePlayerHighScore(player: player, highScore: score)
             navigationController?.popViewController(animated: true)
         } else {
-            PlayerController.sharedInstance.createPlayer(playerName: player.name, highScore: score)
             navigationController?.popViewController(animated: true)
-            }
+        } 
     }
     
     func updateViews() {
