@@ -97,7 +97,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playerHighScore", for: indexPath)
         
-        let player = PlayerController.sharedInstance.leaderboard[indexPath.row]
+        let player = PlayerController.sharedInstance.leaderboard.sorted(by: >)[indexPath.row]
         
         cell.textLabel?.text = player.name
         cell.detailTextLabel?.text = String(player.highScore)

@@ -23,3 +23,9 @@ extension Player: Equatable {
         return lhs.name == rhs.name
     }
 }
+
+extension Player: Comparable {
+    static func < (lhs: Player, rhs: Player) -> Bool {
+        return lhs.highScore < rhs.highScore
+    }
+}
