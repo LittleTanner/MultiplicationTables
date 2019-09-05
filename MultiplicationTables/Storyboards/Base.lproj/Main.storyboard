@@ -186,25 +186,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bk-RB-yAu">
-                                <rect key="frame" x="20.5" y="461.5" width="373" height="70"/>
-                                <color key="backgroundColor" red="0.76941573619842529" green="0.87449842691421509" blue="0.89995342493057251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="Oc0-zR-boN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="PingFangHK-Light" family="PingFang HK" pointSize="39"/>
-                                <state key="normal" title="SUBMIT">
-                                    <color key="titleColor" red="0.00042403719269999999" green="0.23105540869999999" blue="0.27316012979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="submitAnswerButtonTapped:" destination="cTz-l1-Zpm" eventType="touchUpInside" id="3JW-ro-gPs"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="333" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9S-Pv-DPl">
                                 <rect key="frame" x="339" y="113" width="50" height="45"/>
                                 <color key="backgroundColor" red="0.00042403719269999999" green="0.23105540869999999" blue="0.27316012979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -225,7 +206,6 @@
                         <color key="backgroundColor" red="0.025167472660541534" green="0.34160929918289185" blue="0.35514259338378906" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hFw-V7-9dr" firstAttribute="centerX" secondItem="h6j-H3-0vg" secondAttribute="centerX" id="3yJ-C1-ULh"/>
-                            <constraint firstItem="9Bk-RB-yAu" firstAttribute="width" secondItem="AOJ-mX-i7J" secondAttribute="width" multiplier="0.9" id="5Xr-o9-bcw"/>
                             <constraint firstItem="hFw-V7-9dr" firstAttribute="width" secondItem="AOJ-mX-i7J" secondAttribute="width" multiplier="0.2" id="8Z7-LP-Lox"/>
                             <constraint firstItem="o9S-Pv-DPl" firstAttribute="top" secondItem="h6j-H3-0vg" secondAttribute="top" constant="25" id="Axo-qG-rMY"/>
                             <constraint firstItem="iOt-5C-Mzi" firstAttribute="centerX" secondItem="h6j-H3-0vg" secondAttribute="centerX" id="IH9-iM-Gzh"/>
@@ -235,9 +215,7 @@
                             <constraint firstItem="VEo-lf-6nX" firstAttribute="centerX" secondItem="h6j-H3-0vg" secondAttribute="centerX" id="Vnw-dI-lFW"/>
                             <constraint firstItem="VEo-lf-6nX" firstAttribute="top" secondItem="hFw-V7-9dr" secondAttribute="bottom" constant="65" id="aRh-fN-Odv"/>
                             <constraint firstItem="VEo-lf-6nX" firstAttribute="width" secondItem="AOJ-mX-i7J" secondAttribute="width" multiplier="0.8" id="fIw-9B-YTH"/>
-                            <constraint firstItem="9Bk-RB-yAu" firstAttribute="centerX" secondItem="h6j-H3-0vg" secondAttribute="centerX" id="hK5-EE-54m"/>
                             <constraint firstItem="iOt-5C-Mzi" firstAttribute="width" secondItem="AOJ-mX-i7J" secondAttribute="width" multiplier="0.3" constant="1" id="rD8-Lo-MxU"/>
-                            <constraint firstItem="9Bk-RB-yAu" firstAttribute="top" secondItem="iOt-5C-Mzi" secondAttribute="bottom" constant="35" id="sjv-Hl-wv1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h6j-H3-0vg"/>
                     </view>

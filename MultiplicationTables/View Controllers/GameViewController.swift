@@ -52,20 +52,6 @@ class GameViewController: UIViewController {
         }
     }
     
-    @IBAction func submitAnswerButtonTapped(_ sender: Any) {
-        guard let player = player else { return }
-        
-        if answerTextField.text == answer {
-            score += 1
-            updateViews()
-        } else if score > player.highScore {
-            PlayerController.sharedInstance.updatePlayerHighScore(player: player, highScore: score)
-            navigationController?.popViewController(animated: true)
-        } else {
-            navigationController?.popViewController(animated: true)
-        } 
-    }
-    
     func updateViews() {
         scoreLabel.text = "\(score)"
         answerTextField.text = ""
