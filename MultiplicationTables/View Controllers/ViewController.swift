@@ -41,6 +41,9 @@ class ViewController: UIViewController {
 
     @IBAction func startButtonTapped(_ sender: Any) {
         playerNameTextField.resignFirstResponder()
+        if playerNameTextField.text != "" {
+        performSegue(withIdentifier: "startGame", sender: self)
+        }
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {

@@ -33,7 +33,6 @@
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O44-eR-SA7"/>
-                                    <segue destination="cTz-l1-Zpm" kind="show" identifier="startGame" id="hUW-ya-pea"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cDO-pa-hAV">
@@ -102,6 +101,7 @@
                     <connections>
                         <outlet property="leaderboardTableView" destination="cDO-pa-hAV" id="KmP-7m-7pn"/>
                         <outlet property="playerNameTextField" destination="cds-XY-0cW" id="ZqR-Tl-W2W"/>
+                        <segue destination="cTz-l1-Zpm" kind="show" identifier="startGame" id="OTG-iV-onI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
