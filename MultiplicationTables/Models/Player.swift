@@ -9,7 +9,7 @@
 import Foundation
 
 class Player {
-    let name: String
+    var name: String
     var highScore: Int
     
     init(name: String, highScore: Int = 0) {
