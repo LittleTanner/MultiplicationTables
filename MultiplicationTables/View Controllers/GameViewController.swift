@@ -70,24 +70,24 @@ class GameViewController: UIViewController {
             let number2 = Int.random(in: 0..<4)
             setEquation(number1: number1, number2: number2)
         case _ where seconds <= 50 && seconds > 40:
-            let number1 = Int.random(in: 4..<7)
-            let number2 = Int.random(in: 4..<7)
+            let number1 = Int.random(in: 0..<6)
+            let number2 = Int.random(in: 0..<6)
             setEquation(number1: number1, number2: number2)
         case _ where seconds <= 40 && seconds > 30:
-            let number1 = Int.random(in: 7..<10)
-            let number2 = Int.random(in: 7..<10)
+            let number1 = Int.random(in: 0..<8)
+            let number2 = Int.random(in: 0..<8)
             setEquation(number1: number1, number2: number2)
         case _ where seconds <= 30 && seconds > 20:
-            let number1 = Int.random(in: 10..<13)
-            let number2 = Int.random(in: 10..<13)
+            let number1 = Int.random(in: 0..<10)
+            let number2 = Int.random(in: 0..<10)
             setEquation(number1: number1, number2: number2)
         case _ where seconds <= 20 && seconds > 10:
-            let number1 = Int.random(in: 13..<16)
-            let number2 = Int.random(in: 13..<16)
+            let number1 = Int.random(in: 0..<12)
+            let number2 = Int.random(in: 0..<12)
             setEquation(number1: number1, number2: number2)
         default:
-            let number1 = Int.random(in: 16..<19)
-            let number2 = Int.random(in: 16..<19)
+            let number1 = Int.random(in: 0..<15)
+            let number2 = Int.random(in: 0..<15)
             setEquation(number1: number1, number2: number2)
         }
     }
