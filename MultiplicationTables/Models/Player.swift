@@ -10,10 +10,14 @@ import Foundation
 
 class Player: Codable {
     var name: String
+    var multiplier: Int
+    var difficulty: Int
     var highScore: Int
     
-    init(name: String, highScore: Int = 0) {
+    init(name: String, multiplier: Int = 0, difficulty: Int, highScore: Int = 0) {
         self.name = name
+        self.multiplier = multiplier
+        self.difficulty = difficulty
         self.highScore = highScore
     }
 }
