@@ -13,11 +13,9 @@ class GameViewController: UIViewController {
     var player: Player?
     var answer = ""
     var score: Int = 0
-    
     var seconds = 60
     var timer = Timer()
     var isTimerRunning = true
-    
     
     // MARK: - Outlets
     @IBOutlet weak var number1Label: UILabel!
@@ -63,32 +61,188 @@ class GameViewController: UIViewController {
     }
     
     func equationGenerator() {
-        
-        switch seconds {
-        case _ where seconds <= 60 && seconds > 50:
-            let number1 = Int.random(in: 0..<4)
-            let number2 = Int.random(in: 0..<4)
-            setEquation(number1: number1, number2: number2)
-        case _ where seconds <= 50 && seconds > 40:
-            let number1 = Int.random(in: 0..<6)
-            let number2 = Int.random(in: 0..<6)
-            setEquation(number1: number1, number2: number2)
-        case _ where seconds <= 40 && seconds > 30:
-            let number1 = Int.random(in: 0..<8)
-            let number2 = Int.random(in: 0..<8)
-            setEquation(number1: number1, number2: number2)
-        case _ where seconds <= 30 && seconds > 20:
-            let number1 = Int.random(in: 0..<10)
-            let number2 = Int.random(in: 0..<10)
-            setEquation(number1: number1, number2: number2)
-        case _ where seconds <= 20 && seconds > 10:
-            let number1 = Int.random(in: 0..<12)
-            let number2 = Int.random(in: 0..<12)
-            setEquation(number1: number1, number2: number2)
-        default:
-            let number1 = Int.random(in: 0..<15)
-            let number2 = Int.random(in: 0..<15)
-            setEquation(number1: number1, number2: number2)
+        if player?.multiplier == 0 {
+            if player?.difficulty == 1 {
+                let number1 = Int.random(in: 0..<7)
+                let number2 = Int.random(in: 0..<7)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 2 {
+                let number1 = Int.random(in: 1..<13)
+                let number2 = Int.random(in: 1..<13)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 3 {
+                let number1 = Int.random(in: 1..<19)
+                let number2 = Int.random(in: 1..<19)
+                setEquation(number1: number1, number2: number2)
+            }
+        } else if player?.multiplier == 1 {
+            if player?.difficulty == 1 {
+                let number1 = 1
+                let number2 = Int.random(in: 0..<7)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 2 {
+                let number1 = 1
+                let number2 = Int.random(in: 1..<13)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 3 {
+                let number1 = 1
+                let number2 = Int.random(in: 1..<19)
+                setEquation(number1: number1, number2: number2)
+            }
+        } else if player?.multiplier == 2 {
+            if player?.difficulty == 1 {
+                let number1 = 2
+                let number2 = Int.random(in: 0..<7)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 2 {
+                let number1 = 2
+                let number2 = Int.random(in: 1..<13)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 3 {
+                let number1 = 2
+                let number2 = Int.random(in: 1..<19)
+                setEquation(number1: number1, number2: number2)
+            }
+        } else if player?.multiplier == 3 {
+            if player?.difficulty == 1 {
+                let number1 = 3
+                let number2 = Int.random(in: 0..<7)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 2 {
+                let number1 = 3
+                let number2 = Int.random(in: 1..<13)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 3 {
+                let number1 = 3
+                let number2 = Int.random(in: 1..<19)
+                setEquation(number1: number1, number2: number2)
+            }
+        } else if player?.multiplier == 4 {
+            if player?.difficulty == 1 {
+                let number1 = 4
+                let number2 = Int.random(in: 0..<7)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 2 {
+                let number1 = 4
+                let number2 = Int.random(in: 1..<13)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 3 {
+                let number1 = 4
+                let number2 = Int.random(in: 1..<19)
+                setEquation(number1: number1, number2: number2)
+            }
+        } else if player?.multiplier == 5 {
+            if player?.difficulty == 1 {
+                let number1 = 5
+                let number2 = Int.random(in: 0..<7)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 2 {
+                let number1 = 5
+                let number2 = Int.random(in: 1..<13)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 3 {
+                let number1 = 5
+                let number2 = Int.random(in: 1..<19)
+                setEquation(number1: number1, number2: number2)
+            }
+        } else if player?.multiplier == 6 {
+            if player?.difficulty == 1 {
+                let number1 = 6
+                let number2 = Int.random(in: 0..<7)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 2 {
+                let number1 = 6
+                let number2 = Int.random(in: 1..<13)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 3 {
+                let number1 = 6
+                let number2 = Int.random(in: 1..<19)
+                setEquation(number1: number1, number2: number2)
+            }
+        } else if player?.multiplier == 7 {
+            if player?.difficulty == 1 {
+                let number1 = 7
+                let number2 = Int.random(in: 0..<7)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 2 {
+                let number1 = 7
+                let number2 = Int.random(in: 1..<13)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 3 {
+                let number1 = 7
+                let number2 = Int.random(in: 1..<19)
+                setEquation(number1: number1, number2: number2)
+            }
+        } else if player?.multiplier == 8 {
+            if player?.difficulty == 1 {
+                let number1 = 8
+                let number2 = Int.random(in: 0..<7)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 2 {
+                let number1 = 8
+                let number2 = Int.random(in: 1..<13)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 3 {
+                let number1 = 8
+                let number2 = Int.random(in: 1..<19)
+                setEquation(number1: number1, number2: number2)
+            }
+        } else if player?.multiplier == 9 {
+            if player?.difficulty == 1 {
+                let number1 = 9
+                let number2 = Int.random(in: 0..<7)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 2 {
+                let number1 = 9
+                let number2 = Int.random(in: 1..<13)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 3 {
+                let number1 = 9
+                let number2 = Int.random(in: 1..<19)
+                setEquation(number1: number1, number2: number2)
+            }
+        } else if player?.multiplier == 10 {
+            if player?.difficulty == 1 {
+                let number1 = 10
+                let number2 = Int.random(in: 0..<7)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 2 {
+                let number1 = 10
+                let number2 = Int.random(in: 1..<13)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 3 {
+                let number1 = 10
+                let number2 = Int.random(in: 1..<19)
+                setEquation(number1: number1, number2: number2)
+            }
+        } else if player?.multiplier == 11 {
+            if player?.difficulty == 1 {
+                let number1 = 11
+                let number2 = Int.random(in: 0..<7)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 2 {
+                let number1 = 11
+                let number2 = Int.random(in: 1..<13)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 3 {
+                let number1 = 11
+                let number2 = Int.random(in: 1..<19)
+                setEquation(number1: number1, number2: number2)
+            }
+        } else if player?.multiplier == 12 {
+            if player?.difficulty == 1 {
+                let number1 = 12
+                let number2 = Int.random(in: 0..<7)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 2 {
+                let number1 = 12
+                let number2 = Int.random(in: 1..<13)
+                setEquation(number1: number1, number2: number2)
+            } else if player?.difficulty == 3 {
+                let number1 = 12
+                let number2 = Int.random(in: 1..<19)
+                setEquation(number1: number1, number2: number2)
+            }
         }
     }
     

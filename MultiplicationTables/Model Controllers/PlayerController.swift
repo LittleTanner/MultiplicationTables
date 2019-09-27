@@ -23,8 +23,8 @@ class PlayerController {
     // CRUD
     
     // Create Player
-    func createPlayer(playerName: String, highScore: Int) -> Player {
-        let player = Player(name: playerName, highScore: highScore)
+    func createPlayer(playerName: String, multiplier: Int, difficulty: Int, highScore: Int) -> Player {
+        let player = Player(name: playerName, multiplier: multiplier, difficulty: difficulty, highScore: highScore)
         leaderboard.append(player)
         saveToPersistentStorage()
         return player
